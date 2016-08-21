@@ -1,0 +1,23 @@
+.month-panel {
+
+  .month-item {
+    float: left;
+    width: 33.33%;
+    height: 64px;
+    padding: 1.5px;
+
+    .month-btn {
+      height: 61px;
+      line-height: 61px;
+      font-size: 14px;
+      color: #000;
+
+
+      &.selected {
+        background-color: #3BB1F0;
+        color: white;
+        border-radius: 3px;
+      }
+    }
+  }
+}

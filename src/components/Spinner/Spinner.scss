@@ -1,0 +1,13 @@
+.spinner {
+  margin: 12px 0;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+  
+  :global {
+    .bi-icon {
+      margin: 0 12px;
+      color: #3BB1F0;
+    }
+  }
+}

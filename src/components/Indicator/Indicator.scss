@@ -1,0 +1,63 @@
+
+.indicator {
+  height: 65px;
+  margin: 0 10px;
+  padding: 16px 0;
+  line-height: 33px;
+  overflow: hidden;
+  box-shadow: 0px -0.5px 0px 0px #C8C7CC;
+}
+
+.title, .value, .contrast, .arrow {
+  float: left;
+  min-height: 1px;
+}
+.title {
+  width: 30%;
+  font-size: 17px;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.value {
+  width: 40%;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+
+  .empty {
+    color: #cccccc;
+    font-size: 18px;
+  }
+
+}
+.contrast {
+  width: 20%;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  .contrast-name {
+    color: #999;
+  }
+  .contrast-value {
+    &.increase {
+      color: #F2725E;
+      &:before {
+        content: '+';
+      }
+    }
+    &.decrease {
+      color: #17C295;
+      &:before {
+        content: '-';
+      }
+    }
+  }
+}
+.arrow {
+  width: 10%;
+  text-align: right;
+  color: #999;
+}

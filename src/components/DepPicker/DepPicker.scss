@@ -1,0 +1,13 @@
+
+.btn {
+  line-height: 32px;
+  border-radius: 100px;
+  border: 1px solid #CCC;
+  background-color: #FBFBFB;
+
+  &.btn-primary {
+    border: none;
+    background-color: #3BB1F0;
+    color: white;
+  }
+}

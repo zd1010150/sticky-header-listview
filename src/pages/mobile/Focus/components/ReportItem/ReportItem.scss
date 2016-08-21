@@ -1,0 +1,30 @@
+.header {
+  padding: 8px 0 10px 10px;
+  font-size: 15px;
+  line-height: 15px;
+  color: white;
+  background-color: #8E649E;
+}
+.indicator-list-container {
+}
+ul.indicator-list {
+  margin-bottom: 15px;
+  list-style: none;
+  background-color: white;
+
+  & .item {
+    height: 65px;
+    box-shadow: 0px -0.5px 0px 0px #C8C7CC;
+  }
+  :global {
+    .indicator-leave {
+      max-height: 65px;
+    }
+    .indicator-leave.indicator-leave-active {
+      max-height: 1px;
+      transition: max-height 300ms ease-in;
+      overflow: hidden;
+    }
+
+  }
+}
