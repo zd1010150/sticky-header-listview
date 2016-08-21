@@ -19,21 +19,6 @@
   ],
   "author": "fedeoo.zf",
   "license": "MIT",
-  "optionalDependcies": {
-    "chai": "^3.5.0",
-    "enzyme": "^2.4.1",
-    "karma": "^1.1.2",
-    "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^1.0.1",
-    "karma-coverage": "^1.1.1",
-    "karma-mocha": "^1.1.1",
-    "karma-mocha-reporter": "^2.1.0",
-    "karma-phantomjs-launcher": "^1.0.1",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^1.7.0",
-    "mocha": "^3.0.1",
-    "sinon": "^1.17.5"
-  },
   "devDependencies": {
     "assets-webpack-plugin": "^3.4.0",
     "autoprefixer": "^6.3.7",
@@ -72,7 +57,6 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "classnames": "^2.2.5",
-    "echarts": "3.1.10",
     "history": "^2.0.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.14.1",
@@ -86,5 +70,21 @@
     "react-swipeable": "^3.5.1",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0"
+  },
+  "optionalDependencies": {
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
+    "json-loader": "^0.5.4",
+    "karma": "^1.1.2",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.1.0",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^3.0.1",
+    "sinon": "^1.17.5"
   }
 }

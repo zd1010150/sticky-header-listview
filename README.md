@@ -1,5 +1,5 @@
 # munin
-> 必通团队 react + redux 项目组织方案
+> 必通团队 react + redux 项目组织方案；项目考虑多页面场景，同时每个页面下面又是一个单页应用。
 
 ## 文件组织
 
@@ -19,9 +19,9 @@ tree -a -L 3 -I node_modules -I .git --dirsfirst
 │   ├── core # helper && util
 │   ├── flow # common action\reducer\constant
 │   ├── pages
-│   │   ├── routes
+│   │   ├── mobile
 │   │   │   ├── Focus
-│   │   │   └── entry.js # 入口文件，文件名必须为 entry.js
+│   │   │   └── entry.js # 入口文件，文件名必须为 entry.js，build 会在该目录生成一个 index.html 文件
 │   │   └─ tpl.html #模板文件
 │   ├── store
 │   │   ├── configureStore.js
@@ -48,7 +48,9 @@ components 目录下存放公共组件，包括页面布局类，公共的contai
 core 目录下面包括可复用的 util，以及与业务有关的 helper。
 flow 目录下全局共用的 action reducer constant。不按类别分拆。
 styles 目录下全局共用样式，项目开启 css module，该文件下入口文件包含在 `:global {}`
-pages 目录下对应各个页面，如 mobile/Focus 页面
+pages 目录下对应各个页面（这儿的 mobile 是目前已有的一个移动端单页简化版），
+mobile 页面入口文件 entry.js，项目构建会根据entry文件在同目录下根据模板文件生成一个 index.html
+mobile/Focus 页面组织：
 ├── FocusView.jsx # 为区分起见，以View结束
 ├── FocusView.scss
 ├── components # 该页面下的组件，一般会比较多，因此单独一个目录，建议将组件拆分的更小一些。每个组件包含的静态资源在其下的 assets 目录下。
@@ -57,6 +59,7 @@ pages 目录下对应各个页面，如 mobile/Focus 页面
 │   ├── focusActions.js
 │   └── focusReducer.js
 └── index.js
+
 另外，模板文件只有一份，即使是多页面也只有一份，多页面中每个页面的 title 和 spm 埋点会不同，暂未做处理。如果页面极为特殊，如包装第三方登录，以后可做特别处理。
 
 tools 构建文件分为两个的原因是：线上构建之后会走云构建，webpack.config.prod.js 将是不必要的。
