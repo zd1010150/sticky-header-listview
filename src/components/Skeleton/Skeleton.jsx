@@ -3,9 +3,11 @@
  */
 
 import React, { PropTypes } from 'react';
+import Header from '../Header';
 
 const Skeleton = ({ children }) => (
   <div className="container">
+    <Header />
     <div className="main-container">{children}</div>
   </div>
 );
