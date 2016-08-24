@@ -1,5 +1,5 @@
 import Skeleton from 'components/Skeleton';
-import loadFocus from './Focus';
+import loadFocus from './focus';
 
 export const createRoutes = (store) => ({
   path: '/',
