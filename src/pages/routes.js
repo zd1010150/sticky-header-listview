@@ -1,10 +1,10 @@
 import Skeleton from 'components/Skeleton';
-import loadFocus from './focus';
+import loadHome from './home';
 
 export const createRoutes = (store) => ({
   path: '/',
   component: Skeleton,
-  indexRoute: { component: loadFocus(store) },
+  indexRoute: { component: loadHome(store) },
 });
 
 export default createRoutes;

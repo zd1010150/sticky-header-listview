@@ -19,9 +19,8 @@ tree -a -L 3 -I node_modules -I .git --dirsfirst
 │   ├── core # helper && util
 │   ├── flow # common action\reducer\constant
 │   ├── pages
-│   │   ├── mobile
-│   │   │   ├── Focus
-│   │   │   └── entry.js # 入口文件，文件名必须为 entry.js，build 会在该目录生成一个 index.html 文件
+│   │   ├── Focus
+│   │   ├── entry.js # 入口文件，文件名必须为 entry.js，build 会在该目录生成一个 index.html 文件
 │   │   └─ tpl.html #模板文件
 │   ├── store
 │   │   ├── configureStore.js
@@ -48,7 +47,7 @@ components 目录下存放公共组件，包括页面布局类，公共的contai
 core 目录下面包括可复用的 util，以及与业务有关的 helper。   
 flow 目录下全局共用的 action reducer constant。   
 styles 目录下全局共用样式，项目开启 css module，该文件下入口文件包含在 `:global {}`  
-pages 目录下对应各个页面（这儿的 mobile 是目前已有的一个移动端单页简化版），  
+pages 目录下对应各个页面
 mobile 页面入口文件 entry.js，项目构建会根据entry文件在同目录下根据模板文件生成一个 index.html  
 mobile/Focus 页面组织：  
 ```

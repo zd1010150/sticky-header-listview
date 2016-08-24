@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import moment from 'moment';
 
 const util = {
   number: {
@@ -36,64 +35,6 @@ const util = {
         return `${percentValue}%`;
       }
       return '--';
-    },
-  },
-  date: {
-    getDefaultDate() {
-      if (moment().hour() >= 18) {
-        return moment().format('YYYY-MM-DD');
-      }
-      return moment().add(-1, 'day').format('YYYY-MM-DD');
-    },
-    localizeToZh(date) {
-      const tDate = moment(new Date(date));
-      const cDate = moment(new Date());
-      const duration = cDate.diff(tDate, 'days');
-      const durationY = cDate.diff(tDate, 'years');
-      if (duration === 0) {
-        return '今日';
-      } else if (duration === 1) {
-        return '昨日';
-      } else if (durationY === 0) {
-        return tDate.format('MM-DD');
-      }
-      return tDate.format('YYYY-MM-DD');
-    },
-    formatDateOptions(currentDateOptions = {}) {
-      const mode = currentDateOptions.mode;
-      const startDate = moment(currentDateOptions.startDate);
-      const endDate = moment(currentDateOptions.endDate);
-      const now = moment();
-      if (mode === 'day') {
-        const lastday = moment().add(-1, 'day');
-        if (endDate.isSame(now, 'day')) {
-          return '今日';
-        } else if (endDate.isSame(lastday, 'day')) {
-          return '昨日';
-        }
-        return endDate.format('YYYY-MM-DD');
-      } else if (mode === 'week') {
-        const lastweek = moment().add(-1, 'week');
-        if (startDate.isSame(now, 'week') &&
-          endDate.isSame(now, 'week')) {
-          return '本周';
-        } else if (startDate.isSame(lastweek, 'week') &&
-          endDate.isSame(lastweek, 'week')) {
-          return '上周';
-        }
-      } else if (mode === 'month') {
-        const lastMonth = moment().add(-1, 'month');
-        if (startDate.isSame(now, 'month') &&
-          endDate.isSame(now, 'month')) {
-          return '本月';
-        } else if (startDate.isSame(lastMonth, 'month') &&
-          endDate.isSame(lastMonth, 'month')) {
-          return '上月';
-        }
-      }
-      const startDateStr = startDate.format('YYYY-MM-DD');
-      const endDateStr = endDate.format('YYYY-MM-DD');
-      return `${startDateStr}~${endDateStr}`;
     },
   },
   url: {

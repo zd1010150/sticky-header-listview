@@ -32,12 +32,9 @@ const get = (url, data) => {
 let csrfToken;
 const fetchCsrfTokenPromise = () => {
   if (!csrfToken) {
-    csrfToken = request('/alid/sst/csrf/getCsrfToken', {}).then((info) => {
+    // TODO 💰💰💰 修改 csrfTokenUrl
+    csrfToken = request('csrfTokenUrl', {}).then((info) => {
       if (!info || !info.headerName || !info.token) {
-        dd.device.notification.alert({
-          title: '提示',
-          message: '获取CSRF token 失败！',
-        });
         throw new Error('CSRF Not Exist!');
       }
       return info || {};
