@@ -31,7 +31,7 @@ function generateEntries (entryFiles, isProd) {
 function genarateHtmlPlugins(entryFiles, isProd) {
   return _.map(entryFiles, function (entryFile) {
     var chunkName = entryFile.replace(/\/entry\.js$/, '');
-    var htmlPath = entryFile.replace(/entry\.js$/, 'index.html');
+    var htmlPath = entryFile.replace(/^pages\//, '').replace(/entry\.js$/, 'index.html');
     var chunks = [chunkName, 'vendor'];
     if (!isProd) {
       chunks.push('devServerClient');
