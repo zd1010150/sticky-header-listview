@@ -43,13 +43,13 @@ tree -a -L 3 -I node_modules -I .git --dirsfirst
 └── package.json
 ```
 
-components 目录下存放公共组件，包括页面布局类，公共的container，可复用的全局组件（这一类必须有测试）。每个组件包含的静态资源在其下的 assets 目录下。   
-core 目录下面包括可复用的 util，以及与业务有关的 helper。   
-flow 目录下全局共用的 action reducer constant。   
-styles 目录下全局共用样式，项目开启 css module，该文件下入口文件包含在 `:global {}`  
+components 目录下存放公共组件，包括页面布局类，公共的container，可复用的全局组件（这一类必须有测试）。每个组件包含的静态资源在其下的 assets 目录下。
+core 目录下面包括可复用的 util，以及与业务有关的 helper。
+flow 目录下全局共用的 action reducer constant。
+styles 目录下全局共用样式，项目开启 css module，该文件下入口文件包含在 `:global {}`
 pages 目录下对应各个页面
-mobile 页面入口文件 entry.js，项目构建会根据entry文件在同目录下根据模板文件生成一个 index.html  
-mobile/Focus 页面组织：  
+mobile 页面入口文件 entry.js，项目构建会根据entry文件在同目录下根据模板文件生成一个 index.html
+mobile/Focus 页面组织：
 ```
 ├── FocusView.jsx # 为区分起见，以View结束
 ├── FocusView.scss
@@ -63,11 +63,11 @@ mobile/Focus 页面组织：
 
 另外，模板文件只有一份，即使是多页面也只有一份，多页面中每个页面的 title 和 spm 埋点会不同，暂未做处理。如果页面极为特殊，如包装第三方登录，以后可做特别处理。
 
-tools 构建文件分为开发和生成的原因是：线上构建之后会走云构建，webpack.config.prod.js 将是不必要的。   
-test 目录只有一个 karma.conf.js 文件，测试文件不在该目录下。   
-.eslintrc 基于 airbnb 配置。建议在编辑器中打开，实时反馈修改意见。   
-abc.json 云构建的配置   
-abc.sh 云构建脚本，完成 builder 之后不必要   
+tools 构建文件分为开发和生成的原因是：线上构建之后会走云构建，webpack.config.prod.js 将是不必要的。
+test 目录只有一个 karma.conf.js 文件，测试文件不在该目录下。
+.eslintrc 基于 airbnb 配置。建议在编辑器中打开，实时反馈修改意见。
+abc.json 云构建的配置
+abc.sh 云构建脚本，完成 builder 之后不必要
 
 
 ## 项目起步
@@ -77,7 +77,7 @@ abc.sh 云构建脚本，完成 builder 之后不必要
 ```
 npm run start
 ```
-该命令启动的服务默认是 8080 端口。代理到日常环境。依开发情况可以修改`tools/webpack.config.dev.js`中配置。
+该命令启动的服务默认页面在```http://localhost:8088/pages```。代理到日常环境。依开发情况可以修改`tools/webpack.config.dev.js`中配置。
 
 ### 构建
 发布时构建命令：
