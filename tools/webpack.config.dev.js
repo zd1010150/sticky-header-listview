@@ -91,7 +91,7 @@ module.exports = {
     contentBase: `./${dist}`,
     hot: true,
     port: 8088,
-    proxy: {
+    proxy: { // TODO 💰💰💰 开发时记得修改 💰💰💰 
       '/alid/*': {
         target: 'http://112.124.132.78',
         host: 'clouddata-test.dingtalkapps.com',
