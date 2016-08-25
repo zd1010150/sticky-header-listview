@@ -79,8 +79,6 @@ module.exports = {
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',
-    'salt-ui': 'SaltUI',
-    moment: 'moment',
   },
   plugins: plugins,
   module: {

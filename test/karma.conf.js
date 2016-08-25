@@ -75,7 +75,6 @@ const karmaConfig = {
       }],
     },
     externals: {
-      'salt-ui': 'SaltUI',
       'react/addons': true,
       'react/lib/ExecutionEnvironment': true,
       'react/lib/ReactContext': 'window',
