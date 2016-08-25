@@ -77,7 +77,7 @@ abc.sh 云构建脚本，完成 builder 之后不必要
 ```
 npm run start
 ```
-该命令启动的服务默认页面在```http://localhost:8088/pages```。代理到日常环境。依开发情况可以修改`tools/webpack.config.dev.js`中配置。
+该命令启动的服务默认页面在```http://localhost:8088```。代理到日常环境。依开发情况可以修改`tools/webpack.config.dev.js`中配置。
 
 ### 构建
 发布时构建命令：
