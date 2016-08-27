@@ -1,0 +1,20 @@
+/**
+ * 裁剪 bootstrap
+ */
+
+$body-bg: #f5f5f5;
+$state-danger-text: #f2725e;
+$state-primary-text: #3BB1F0;
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables"; //this is the key to easy customisation
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "~bootstrap-sass/assets/stylesheets/~bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+
+// Core CSS
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/grid";
+
+// Utility classes
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";

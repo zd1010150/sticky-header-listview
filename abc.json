@@ -1,0 +1,11 @@
+{
+  "assets": {
+    "type": "command",
+    "command": {
+      "cmd": [
+        "sh abc.sh"
+      ]
+    },
+    "image": "tnpm3"
+  }
+}
